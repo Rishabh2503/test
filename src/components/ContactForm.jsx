@@ -9,7 +9,7 @@ const ContactForm = () => {
     <FadeIn>
       <form>
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
+          Bot inquiries
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
           <TextInput label="Name" name="name" autoComplete="name" />
@@ -20,13 +20,13 @@ const ContactForm = () => {
             autoComplete="email"
           />
           <TextInput
-            label="Company"
+            label="Name"
             name="company"
             autoComplete="organization"
           />
           <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
           <TextInput label="Message" name="message" />
-          <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
+          {/* <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
             </fieldset>
@@ -36,10 +36,10 @@ const ContactForm = () => {
               <RadioInput label="$100K – $150K" name="budget" value="100" />
               <RadioInput label="More than $150K" name="budget" value="150" />
             </div>
-          </div>
+          </div> */}
         </div>
         <Button type="submit" className="mt-10">
-          Let’s work together
+          Talk To us on Whatsapp
         </Button>
       </form>
     </FadeIn>

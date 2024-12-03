@@ -94,7 +94,7 @@ const Navigation = () => {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">How Bino works</NavigationItem>
+        <NavigationItem href="/">How Bino works</NavigationItem>
         <NavigationItem href="/search">Templetes</NavigationItem>
       </NavigationRow>
       <NavigationRow>

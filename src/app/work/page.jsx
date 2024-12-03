@@ -9,9 +9,7 @@ const WorkPage = () => {
         title="Proven solutions for real-world problems."
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          Work with us and create amazing Chat bots on bino.bot
         </p>
       </PageIntro>
     </>
