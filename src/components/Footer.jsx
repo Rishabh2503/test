@@ -40,7 +40,7 @@ const NewsletterForm = () => {
           <button
             type="submit"
             aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+            className="flex aspect-square h-full items-center justify-center rounded-xl bg-sky-500 text-white transition hover:bg-neutral-800"
           >
             <ArrowIcon className="w-4" />
           </button>
@@ -62,12 +62,12 @@ const Footer = () => {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href={"/"} aria-label="Home">
-            <Logo className="h-8" fillOnHover>
-              Abdullah Agency
+            <Logo className="h-8" fillonhover="true">
+              Bino
             </Logo>
           </Link>
           <p className="text-sm text-neutral-700">
-            © Abdullah Agency Inc. {new Date().getFullYear()}
+            © Bino Inc. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>
