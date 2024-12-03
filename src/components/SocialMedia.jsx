@@ -11,23 +11,23 @@ import {
 export const SocialMediaProfiles = [
   {
     title: "Youtube",
-    href: "https://www.youtube.com/watch?v=eAswnbWptBM",
+    href: "",
     icon: BsYoutube,
   },
-  { title: "GitHub", href: "https://github.com/chrhi", icon: BsGithub },
+  { title: "GitHub", href: "", icon: BsGithub },
   {
     title: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=100010070348939",
+    href: "",
     icon: BsFacebook,
   },
   {
     title: "linkedin",
-    href: "https://www.linkedin.com/in/chehri-abdellah-4a8858267/",
+    href: "",
     icon: BsLinkedin,
   },
   {
     title: "Twitter",
-    href: "https://twitter.com/KING_IN_JUNGLE",
+    href: "",
     icon: BsTwitter,
   },
 ];

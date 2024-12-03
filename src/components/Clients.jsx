@@ -1,45 +1,55 @@
-import Image from "next/image";
-import logoBrightPath from "../images/clients/bright-path/logo-light.svg";
-import logoFamilyFund from "../images/clients/family-fund/logo-light.svg";
-import logoGreenLife from "../images/clients/green-life/logo-light.svg";
-import logoHomeWork from "../images/clients/home-work/logo-light.svg";
-import logoMailSmirk from "../images/clients/mail-smirk/logo-light.svg";
-import logoNorthAdventures from "../images/clients/north-adventures/logo-light.svg";
-import logoPhobiaLight from "../images/clients/phobia/logo-light.svg";
-import logoUnseal from "../images/clients/unseal/logo-light.svg";
-import Container from "./Container";
-import FadeIn, { FadeInStagger } from "./FadeIn";
+import {
+  ShoppingCart,
+  Heart,
+  ReceiptSwissFranc,
+  Globe2,
+  CarFront,
+  PawPrint,
+  House,
+  Book
+} from 'lucide-react';
+import Container from './Container';
+import FadeIn, { FadeInStagger } from './FadeIn';
 
 const clients = [
-  ["Phobia", logoPhobiaLight],
-  ["Family Fund", logoFamilyFund],
-  ["Unseal", logoUnseal],
-  ["Mail Smirk", logoMailSmirk],
-  ["Home Work", logoHomeWork],
-  ["Green Life", logoGreenLife],
-  ["Bright Path", logoBrightPath],
-  ["North Adventures", logoNorthAdventures],
+  { name: 'Shopping', icon: <ShoppingCart /> },
+  { name: 'Car Service', icon: <CarFront /> },
+  { name: 'Travel', icon: <Globe2 /> },
+  { name: 'Fitness', icon: <Heart /> },
+  { name: 'Restaurant', icon: <ReceiptSwissFranc /> },
+  { name: 'PetCare', icon: <PawPrint /> },
+  { name: 'Real Estate', icon: <House /> },
+  { name: 'Education', icon: <Book /> }
 ];
 
 const Clients = () => {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className='mt-24 rounded-4xl bg-sky-500 py-10 sm:mt-32 sm:py-32 lg:mt-56'>
       <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We have worked with hundreds of amazing people
+        <FadeIn className='flex justify-center items-center gap-x-8'>
+          <h2 className='text-center font-display text-4xl font-semibold tracking-wider text-white sm:text-left'>
+            What are you looking for?
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
+            role='list'
+            className='mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4'>
+            {clients.map(({ name, icon }) => (
+              <li
+                key={name} // Use the unique "name" property as the key
+                className='flex flex-col justify-center items-center text-center'>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <div
+                    className='text-white text-[6rem] mb-4'
+                    style={{ fontSize: '6rem' }}>
+                    {icon}
+                  </div>
+                </FadeIn>
+                <FadeIn>
+                  <div className='text-white text-2xl font-semibold'>
+                    {name}
+                  </div>
                 </FadeIn>
               </li>
             ))}
