@@ -1,7 +1,7 @@
 export function constructMetadata({
-  title = "Abdullah Agency ",
-  description = "Abdullah Agency is an open-source website.",
-  image = "/agency.PNG",
+  title = "bino.bot ",
+  description = "bino.bot is an open-source website.",
+  image = "/src/images/Bino_logo.png",
   icons = "/favicon.ico",
   noIndex = false,
 }) {
@@ -22,10 +22,10 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@KING_IN_JUNGLE",
+      creator: "",
     },
     icons,
-    metadataBase: new URL("https://agency-website-abdullah.vercel.app/"),
+    metadataBase: new URL("/"),
     themeColor: "#FFF",
     ...(noIndex && {
       robots: {

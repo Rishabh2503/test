@@ -2,28 +2,28 @@ import { SocialMediaProfiles } from "@/components/SocialMedia";
 
 export const navigation = [
   {
-    title: "Work",
+    title: "Bino.Bot",
     links: [
-      { title: "AH MANA3RAF", href: "/work/amazonclone" },
-      { title: "AH MANA3RAF", href: "/work/bazar" },
-      { title: "AH MANA3RAF", href: "/work/blog101" },
+      { title: "bino", href: "/" },
+      { title: "bot", href: "/" },
+      { title: "Chat", href: "/" },
       {
         title: (
           <>
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: "/work",
+        href: "/",
       },
     ],
   },
   {
     title: "Company",
     links: [
-      { title: "About", href: "/about" },
-      { title: "Process", href: "/process" },
-      { title: "Blog", href: "/blog" },
-      { title: "Contact us", href: "/contact" },
+      { title: "About Bino", href: "/" },
+      { title: "Templetes", href: "/search" },
+      { title: "Blog", href: "/" },
+      { title: "Contact us", href: "/" },
     ],
   },
   {
