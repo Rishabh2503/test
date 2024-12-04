@@ -19,7 +19,7 @@ const SearchPage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'http://localhost:1337/api/search-pages?filters[slug][$eq]=hotels-in-udaipur'
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/search-pages?filters[slug][$eq]=hotels-in-udaipur`
         );
         const data = await response.json();
         console.log('Fetched Data:', data); // Log the API response for debugging
