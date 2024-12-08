@@ -98,7 +98,7 @@ const Navigation = () => {
         <NavigationItem href="/find">Templetes</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/">For Business</NavigationItem>
+        <NavigationItem href="/bino-business">For Business</NavigationItem>
         <NavigationItem href="https://portfolio2-amber-kappa.vercel.app/">Author</NavigationItem>
       </NavigationRow>
     </nav>
