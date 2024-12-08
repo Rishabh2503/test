@@ -95,10 +95,10 @@ const Navigation = () => {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/">How Bino works</NavigationItem>
-        <NavigationItem href="/search">Templetes</NavigationItem>
+        <NavigationItem href="/find">Templetes</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/search">For Business</NavigationItem>
+        <NavigationItem href="/bino-business">For Business</NavigationItem>
         <NavigationItem href="https://portfolio2-amber-kappa.vercel.app/">Author</NavigationItem>
       </NavigationRow>
     </nav>
