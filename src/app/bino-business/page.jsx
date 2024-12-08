@@ -240,7 +240,7 @@ const BusinessPage = () => {
             Ready to Drive Your Business Growth with Bino Bot?
           </h2>
           <p className="text-gray-600 mb-8">
-            Whether you're looking to expand distribution, prioritize leads, or streamline sourcing, 
+            Whether you&apos;re looking to expand distribution, prioritize leads, or streamline sourcing, 
             Bino Bot has a solution for you.
           </p>
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition">
