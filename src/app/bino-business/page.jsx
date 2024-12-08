@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import Container from '@/components/Container';
 import SearchIntro from '@/components/SearchIntro';
-import { MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import Lottie from 'lottie-react';
 import SchemaOrg from '@/components/SchemaOrg';
@@ -96,6 +96,13 @@ const generateBusinessSchema = () => {
 };
 
 const BusinessPage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
   const solutions = [
     {
       title: "Join the Bino Network",
@@ -165,7 +172,7 @@ const BusinessPage = () => {
     <div className="min-h-screen bg-white">
       <SchemaOrg schema={generateBusinessSchema()} />
       
-      <Container>
+      <Container className="text-black">
         {/* Hero Section */}
         <SearchIntro
           title="Grow Your Business with Bino for Business Platform"
