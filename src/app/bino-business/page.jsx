@@ -199,8 +199,7 @@ const BusinessPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-       <ClientSchemaOrg />
-      
+       
       <Container className="text-black">
         {/* Hero Section */}
         <SearchIntro
