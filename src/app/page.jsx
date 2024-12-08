@@ -5,8 +5,8 @@ import Container from '@/components/Container';
 import FadeIn from '@/components/FadeIn';
 import animationData from '../../public/Lottie/Animation1.json';
 import Services from '@/components/Services';
+import Lottie from 'lottie-react';
 import SchemaOrg from '@/components/SchemaOrg';
-import ClientLottie from '@/components/ClientLottie';
 
 // Generate comprehensive schema for the home page
 const generateHomePageSchema = () => {
@@ -112,6 +112,7 @@ const generateHomePageSchema = () => {
 export default function Home() {
   return (
     <main className='text-black'>
+      {/* Use the SchemaOrg component instead of direct script injection */}
       <SchemaOrg schema={generateHomePageSchema()} />
 
       <div className='md:mt-12 sm:mt-32 flex items-center justify-center'>
@@ -124,7 +125,7 @@ export default function Home() {
               FIND ANYTHING NEAR YOU!
             </p>
           </div>
-          <ClientLottie
+          <Lottie
             animationData={animationData}
             className='flex justify-center items-center h-full w-full md:ml-14'
             loop={true}
