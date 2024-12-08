@@ -18,6 +18,35 @@ import supportAnimation from '@/lotties/customer support.json';
 import insightsAnimation from '@/lotties/Data Analytics.json';
 
 // Add this function before your BusinessPage component
+const ClientSchemaOrg = () => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bino for Business",
+    "description": "Connecting Customers, Brands, Retailers and Distributors for Growth",
+    "url": "https://bino.bot/bino-business",
+    "logo": "https://bino.bot/logo.png",
+    "sameAs": [
+      "https://twitter.com/binobot",
+      "https://linkedin.com/company/binobot"
+    ],
+    // ... rest of your schema object
+  };
+
+  useEffect(() => {
+    // Only create and insert the schema when on client side
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  return null;
+};
 const generateBusinessSchema = () => {
   const schema = {
     "@context": "https://schema.org",
@@ -170,7 +199,7 @@ const BusinessPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SchemaOrg schema={generateBusinessSchema()} />
+       <ClientSchemaOrg />
       
       <Container className="text-black">
         {/* Hero Section */}
