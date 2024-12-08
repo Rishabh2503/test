@@ -6,6 +6,7 @@ import FadeIn from '@/components/FadeIn';
 import animationData from '../../public/Lottie/Animation1.json';
 import Services from '@/components/Services';
 import Lottie from 'lottie-react';
+import SchemaOrg from '@/components/SchemaOrg';
 
 // Generate comprehensive schema for the home page
 const generateHomePageSchema = () => {
@@ -111,16 +112,8 @@ const generateHomePageSchema = () => {
 export default function Home() {
   return (
     <main className='text-black'>
-      {/* Add Schema.org JSON-LD */}
-      {generateHomePageSchema().map((schema, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema)
-          }}
-        />
-      ))}
+      {/* Use the SchemaOrg component instead of direct script injection */}
+      <SchemaOrg schema={generateHomePageSchema()} />
 
       <div className='md:mt-12 sm:mt-32 flex items-center justify-center'>
         <FadeIn className='max-w-7xl md:flex items-center md:space-x-4 px-8'>

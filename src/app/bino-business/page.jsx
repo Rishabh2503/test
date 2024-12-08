@@ -6,6 +6,7 @@ import SearchIntro from '@/components/SearchIntro';
 import { MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import Lottie from 'lottie-react';
+import SchemaOrg from '@/components/SchemaOrg';
 
 // Import Lottie animations
 import networkAnimation from '@/lotties/network.json';
@@ -162,14 +163,8 @@ const BusinessPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Add Schema.org JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBusinessSchema())
-        }}
-      />
-
+      <SchemaOrg schema={generateBusinessSchema()} />
+      
       <Container>
         {/* Hero Section */}
         <SearchIntro
